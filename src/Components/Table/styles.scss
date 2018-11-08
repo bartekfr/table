@@ -1,0 +1,117 @@
+// Table component
+$thColor2: rgb(212, 212, 231);
+$thColor1: rgb(230, 235, 245);
+
+.tbcomp {
+  padding: 40px 60px;
+
+  &__table {
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+  }
+
+  &__tr,
+  &__td,
+  &__th {
+    position: relative;
+    border: 1px solid #000;
+  }
+
+  &__tr {
+    &:first-child {
+      .tbcomp__th:first-child {
+        .menu__bt:nth-child(1),
+        .menu__bt:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+
+    &:not(:first-child) > th:first-child {
+      background: $thColor1;
+    }
+  }
+
+  &__td,
+  &__th {
+    min-width: 75px;
+    max-width: 200px;
+    height: 50px;
+    background-clip: padding-box !important; // fix for dissapearing cell borders in FF
+  }
+
+  &__th {
+    background-color: #ccc;
+    background: linear-gradient(to bottom, $thColor1 0%, $thColor1 50%, $thColor2 100%);
+
+    &:hover {
+      background: $thColor2;
+      .menu {
+        display: flex;
+      }
+    }
+  }
+
+  &__td:hover {
+    background: rgba(255, 255, 0, 0.2);
+  }
+
+  &__input {
+    width: 100%;
+    border: 0 none;
+    padding: 15px 22px;
+    background: none;
+    font-size: 16px;
+  }
+
+  &__hint {
+    color: #f00;
+    margin: 5px 0 0;
+    padding: 0;
+    font-size: 14px;
+  }
+}
+
+
+// Table component context menu
+.menu {
+  display: none;
+  align-content: center;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  top: -30px;
+
+  &__bt {
+    flex: 1 1 auto;
+    padding: 1px;
+    border: 0 none;
+    background: none;
+    font-size: 14px;;
+
+    &:nth-child(2) {
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+}
+
+$menuWidth: 30px;
+.menu--row {
+  flex-direction: column;
+  height: calc(100% + 20px);
+  top: -10px;
+  width: $menuWidth;
+  left: -$menuWidth;
+}
+
+// Table component export to CSV button
+.csv-btn {
+  padding: 10px 15px;
+  margin: 20px 0;
+  border: 0;
+  background: #0058dc;
+  color: #fff;
+}
