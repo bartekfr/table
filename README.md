@@ -12,5 +12,5 @@ Firstly install all dependencies - `npm i`.
 1. `npm start`
 
 ## Other commands:
-1.`npm test`
-2.`npm run lint`
+1. `npm test`
+2. `npm run lint`
