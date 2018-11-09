@@ -37,7 +37,7 @@ class Table extends React.Component {
     }),
   }
   /*
-   Table reinitializes when data props changes (assuming it's immutable).
+   Table reinitializes when data prop changes (assuming it's immutable).
    Another approach to reinitializng component could be
    using `key` prop on fully uncontrolled component like described here:
    https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#recommendation-fully-uncontrolled-component-with-a-key
