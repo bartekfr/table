@@ -139,6 +139,9 @@ class Table extends React.Component {
       data: cells.length ? cells : null,
     };
 
+    // Generally array indexes shouldn't be used as keys but in this specific case
+    // it shouldn't cause any issues
+
     return (
       <div className="tbcomp">
         <table className="tbcomp__table">
