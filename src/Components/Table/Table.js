@@ -27,13 +27,13 @@ class Table extends React.Component {
       cells: [],
     },
   }
-  // TODO: consider passing columnNames and data as separate props
+  // TODO: consider passing columnNames and cells as separate props
 
   static propTypes = {
     onChange: PropTypes.func,
     data: PropTypes.shape({
       columnNames: PropTypes.array,
-      data: PropTypes.array,
+      cells: PropTypes.array,
     }),
   }
   /*
