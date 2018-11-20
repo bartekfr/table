@@ -28,5 +28,5 @@ export function updateItem(array, index, newItem) {
 export function saveAsCSV(data) {
   const csvString = PapaParse.unparse(data);
   const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8' });
-  saveAs(blob, 'tableCSV.txt');
+  saveAs(blob, 'tableCSV.csv');
 }

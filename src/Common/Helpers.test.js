@@ -17,6 +17,6 @@ describe('Helpers', () => {
     saveAsCSV(data);
     expect(PapaParse.unparse).toHaveBeenCalledWith(data);
     expect(saveAs).toHaveBeenCalled();
-    expect(saveAs.mock.calls[0][1]).toBe('tableCSV.txt');
+    expect(saveAs.mock.calls[0][1]).toBe('tableCSV.csv');
   });
 });
